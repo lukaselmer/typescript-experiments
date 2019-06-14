@@ -8,10 +8,10 @@ console.log(color);
 
 type EnumFromArray<T> = T extends readonly (infer R)[] ? R : never;
 type Color2 = EnumFromArray<typeof colors>;
-const name = 'bla';
 const color2: Color2 = 'blue';
 console.log(color2);
 
+const name = 'bla';
 type Color3 = EnumFromArray<typeof name>;
 let color3: Color3;
 // color3 = null; Error: Type 'null' is not assignable to type 'never'
